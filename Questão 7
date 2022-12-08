@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class questao_7 {
+
+	public static void main(String[] args) {
+		Scanner t = new Scanner (System.in);
+		double num = t.nextDouble();
+		double v5 = num * 0.05;
+		double v50 = num * 0.5;
+		double v150 = num * 1.50;
+		
+		System.out.printf("5 por cento do valor informado: %.1f\n" +
+		"50 por cento do valor informado: %.2f\n" +
+		"150 por cento do valor informado: %.3f\n", v5, v50, v150);
+		
+		
+		t.close();
+	}
+
+}
