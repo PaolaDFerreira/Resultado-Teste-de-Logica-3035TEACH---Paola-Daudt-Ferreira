@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class questao_2 {
+
+	public static void main(String[] args) {
+		Scanner t = new Scanner (System.in);
+		System.out.println("Digite uma frase/palavra: ");
+		String str = t.nextLine();
+		System.out.println(stringAoContrario(str));
+		t.close();
+
+	}
+	
+	public static String stringAoContrario (String str){
+		StringBuilder nstr = new StringBuilder(str);
+		nstr.reverse();
+		String nova_str = nstr.toString();
+		return nova_str;
+	}
+	
+}
