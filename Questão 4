@@ -1,0 +1,55 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+
+public class questao_4 {
+
+	public static void main(String[] args) throws ParseException {
+		Scanner t = new Scanner (System.in);
+		System.out.println("Digite a data no formato MM/DD/YY: ");
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yy");
+        Date data = sdf.parse(t.nextLine());
+        
+		System.out.println(diaDaSemana(data));
+		t.close();
+		
+	}
+	
+	public static String diaDaSemana(Date data) {
+				
+        GregorianCalendar gc = new GregorianCalendar();
+        gc.setTime(data);
+        int dia = gc.get(GregorianCalendar.DAY_OF_WEEK);
+        String diaDaSemana = "";
+        
+        switch (dia) {
+        case 1:
+        	diaDaSemana = "Domingo";
+        	break;
+        case 2:
+        	diaDaSemana = "Segunda";
+        	break;
+        case 3:
+        	diaDaSemana = "Terça";
+        	break;
+        case 4:
+        	diaDaSemana = "Quarta";
+        	break;
+        case 5:
+        	diaDaSemana = "Quinta";
+        	break;
+        case 6:
+        	diaDaSemana = "Sexta";
+        	break;
+        case 7:
+        	diaDaSemana = "Sábado";
+        	break;
+        }
+        
+        
+		return diaDaSemana;
+	}
+
+}
