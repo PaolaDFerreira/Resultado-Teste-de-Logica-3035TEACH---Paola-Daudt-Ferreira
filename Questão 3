@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class questao_3 {
+
+	public static void main(String[] args) {
+		Scanner t = new Scanner (System.in);
+		
+		System.out.println("Digite uma palavra: ");
+		
+		String p = t.nextLine();
+		
+		System.out.println(vogais(p));
+		
+		
+		t.close();
+
+	}
+	
+	public static String vogais(String p) {
+		String vogais = "";
+		
+		for (int i = 0; i < p.length(); i++) {
+			if (p.charAt(i) == 'a' || p.charAt(i) == 'e' || p.charAt(i) == 'i' || p.charAt(i) == 'o' || p.charAt(i) == 'u') {
+				vogais += p.charAt(i);
+			}
+		}
+		return vogais;
+	}
+	
+
+	}
