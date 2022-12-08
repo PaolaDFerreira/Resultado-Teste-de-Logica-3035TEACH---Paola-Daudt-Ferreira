@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class questao_6 {
+
+	public static void main(String[] args) {
+	Scanner t = new Scanner (System.in);
+	
+	double num_1 = t.nextDouble();
+	double num_2 = t.nextDouble();
+	double num_3 = t.nextDouble();
+	double soma = num_1 + num_2 + num_3;
+	double media = (num_1 + num_2 + num_3) / 3;
+	
+	System.out.printf("Soma dos números: %.2f\n" +
+	"Média dos números: %.2f", soma, media);
+	
+	t.close();
+
+	}
+
+}
